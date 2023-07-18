@@ -16,7 +16,7 @@ const TIMEOUT = 10000;
 let port = 3001;
 
 var httpsServer = HTTPS.createServer(credentials, app);
-httpsServer.listen(port, '127.0.0.1', function() {
+httpsServer.listen(port, function() {
   console.log("Server running on port %s...",port);
 });
 
