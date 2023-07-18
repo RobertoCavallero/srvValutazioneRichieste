@@ -1,7 +1,6 @@
 "use strict"
 const mongoFunctions=require("./mongoFunctions");
 const fs = require('fs');
-const HTTPS = require('https');
 const express = require("express");
 const cors = require('cors');
 const app = express();
@@ -69,4 +68,4 @@ app.use('/', function(req, res, next) {
   });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`app listening on port ${port}!`));
