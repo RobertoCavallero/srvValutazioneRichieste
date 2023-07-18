@@ -13,7 +13,7 @@ const certificate = fs.readFileSync("keys/certificate.pem", "utf8");
 const credentials = {"key":privateKey, "cert":certificate};
 
 const TIMEOUT = 10000;
-let port = 8888;
+let port = 3001;
 
 var httpsServer = HTTPS.createServer(credentials, app);
 httpsServer.listen(port, '127.0.0.1', function() {
