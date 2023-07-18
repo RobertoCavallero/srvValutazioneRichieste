@@ -15,10 +15,6 @@ const credentials = {"key":privateKey, "cert":certificate};
 const TIMEOUT = 10000;
 let port = 3001;
 
-var httpsServer = HTTPS.createServer(credentials, app);
-httpsServer.listen(port, function() {
-  console.log("Server running on port %s...",port);
-});
 
 // middleware
 app.use("/", bodyParser.json());
@@ -72,3 +68,5 @@ app.use('/', function(req, res, next) {
     res.send(pageNotFound);
   });
 });
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
